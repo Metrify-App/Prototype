@@ -1,0 +1,33 @@
+{
+    "workspace": {
+        "name": "Gentle Mates",
+        "email": "user@gmail.com",
+        "logo": "/Logo.png"
+    },
+    "navigation": {
+        "main": [
+            { "label": "Home", "icon": "Home", "href": "/", "active": true }
+        ],
+        "yourSpace": [
+            { "label": "Community Manager", "icon": "BarChart3", "href": "/community-manager" }
+        ],
+        "socialMedia": [
+            { "label": "Twitter", "icon": "twitter", "href": "/social/twitter" },
+            { "label": "Twitch", "icon": "twitch", "href": "/social/twitch" },
+            { "label": "YouTube", "icon": "youtube", "href": "/social/youtube" },
+            { "label": "Instagram", "icon": "instagram", "href": "/social/instagram" },
+            { "label": "TikTok", "icon": "tiktok", "href": "/social/tiktok" }
+        ],
+        "partnerships": [
+            { "label": "Project", "icon": "FolderOpen", "href": "/partnerships/project" },
+            { "label": "Visa", "icon": "Pin", "href": "/partnerships/visa" }
+        ],
+        "tools": [
+            { "label": "Tracking links", "icon": "Link", "href": "/tools/tracking-links" }
+        ]
+    },
+    "footer": [
+        { "label": "Access", "icon": "Users", "href": "/access" },
+        { "label": "Settings", "icon": "Settings", "href": "/settings" }
+    ]
+}
