@@ -2,10 +2,10 @@
 
 import { Users, Eye, Heart, MessageCircle, Bookmark, Navigation } from 'lucide-react';
 import StatsCard from '@/app/components/stats-card';
-import SocialGrowthChart from '@/app/components/social-growth-chart';
-import SocialEngagementChart from '@/app/components/social-engagement-chart';
-import { InstagramTable } from '@/app/components/social-tables';
-import { SiInstagram } from '@/app/components/social-icons';
+import SocialGrowthChart from '@/app/components/social/social-growth-chart';
+import SocialEngagementChart from '@/app/components/social/social-engagement-chart';
+import { InstagramTable } from '@/app/components/social/social-tables';
+import { SiInstagram } from '@/app/components/social/social-icons';
 import instagramData from '@/data/instagram.json';
 import { ChartConfig } from '@/app/components/ui/chart';
 

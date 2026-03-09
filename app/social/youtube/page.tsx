@@ -2,10 +2,10 @@
 
 import { Users, Eye, Clock, ThumbsUp, MessageCircle, Share2 } from 'lucide-react';
 import StatsCard from '@/app/components/stats-card';
-import SocialGrowthChart from '@/app/components/social-growth-chart';
-import SocialTrafficChart from '@/app/components/social-traffic-chart';
-import { YoutubeTable } from '@/app/components/social-tables';
-import { SiYoutube } from '@/app/components/social-icons';
+import SocialGrowthChart from '@/app/components/social/social-growth-chart';
+import SocialTrafficChart from '@/app/components/social/social-traffic-chart';
+import { YoutubeTable } from '@/app/components/social/social-tables';
+import { SiYoutube } from '@/app/components/social/social-icons';
 import youtubeData from '@/data/youtube.json';
 import { ChartConfig } from '@/app/components/ui/chart';
 
