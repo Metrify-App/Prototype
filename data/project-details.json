@@ -1,0 +1,396 @@
+{
+    "1": {
+        "overview": {
+            "mediaValue": "$18,450",
+            "totalViews": "1.37M",
+            "totalFollowers": "+2,340",
+            "engagementRate": "4.8%",
+            "totalPosts": "12",
+            "logoAppearance": "78%"
+        },
+        "platformStats": [
+            {
+                "platform": "youtube",
+                "views": "892K",
+                "followers": "+1,200",
+                "engagement": "5.1%",
+                "posts": 5,
+                "mediaValue": "$9,800",
+                "logoAppearance": "82%"
+            },
+            {
+                "platform": "twitter",
+                "views": "210K",
+                "followers": "+540",
+                "engagement": "3.8%",
+                "posts": 3,
+                "mediaValue": "$3,200",
+                "logoAppearance": "65%"
+            },
+            {
+                "platform": "instagram",
+                "views": "168K",
+                "followers": "+380",
+                "engagement": "6.2%",
+                "posts": 2,
+                "mediaValue": "$3,450",
+                "logoAppearance": "91%"
+            },
+            {
+                "platform": "tiktok",
+                "views": "100K",
+                "followers": "+220",
+                "engagement": "4.1%",
+                "posts": 2,
+                "mediaValue": "$2,000",
+                "logoAppearance": "73%"
+            }
+        ],
+        "engagementOverTime": {
+            "labels": ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6", "Sem 7", "Sem 8"],
+            "views": [45000, 120000, 180000, 210000, 250000, 195000, 220000, 150000],
+            "engagement": [3.2, 4.1, 5.3, 4.8, 5.1, 4.5, 4.9, 4.6]
+        },
+        "posts": [
+            {
+                "id": "p1",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Test derniere carte Visa - Mon avis apres 2 semaines",
+                "author": "Gotaga",
+                "platform": "youtube",
+                "date": "2026-01-20",
+                "views": "245K",
+                "likes": "12.3K",
+                "comments": "1.8K",
+                "engagement": "5.7%",
+                "logoAppearance": "85%"
+            },
+            {
+                "id": "p2",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Unboxing Visa x Gentle Mates",
+                "author": "Michou",
+                "platform": "youtube",
+                "date": "2026-01-25",
+                "views": "189K",
+                "likes": "9.1K",
+                "comments": "920",
+                "engagement": "5.3%",
+                "logoAppearance": "72%"
+            },
+            {
+                "id": "p3",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Visa Test - Fortnite 120fps",
+                "author": "Squeezie",
+                "platform": "youtube",
+                "date": "2026-02-03",
+                "views": "512K",
+                "likes": "28.4K",
+                "comments": "3.2K",
+                "engagement": "6.2%",
+                "logoAppearance": "90%"
+            },
+            {
+                "id": "p4",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Setup tour avec la nouvelle carte Visa",
+                "author": "Kameto",
+                "platform": "youtube",
+                "date": "2026-02-10",
+                "views": "98K",
+                "likes": "4.8K",
+                "comments": "560",
+                "engagement": "5.5%",
+                "logoAppearance": "68%"
+            },
+            {
+                "id": "p5",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Visa vs Mastercard - Le comparatif",
+                "author": "Sardoche",
+                "platform": "youtube",
+                "date": "2026-02-18",
+                "views": "321K",
+                "likes": "15.6K",
+                "comments": "2.1K",
+                "engagement": "5.5%",
+                "logoAppearance": "88%"
+            },
+            {
+                "id": "p6",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "La carte Visa qui change tout - Thread",
+                "author": "Gotaga",
+                "platform": "twitter",
+                "date": "2026-01-22",
+                "views": "89K",
+                "likes": "3.2K",
+                "comments": "450",
+                "engagement": "4.1%",
+                "logoAppearance": "60%"
+            },
+            {
+                "id": "p7",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Nouveau partenariat Visa x Gentle Mates",
+                "author": "Kameto",
+                "platform": "twitter",
+                "date": "2026-02-01",
+                "views": "67K",
+                "likes": "2.8K",
+                "comments": "310",
+                "engagement": "4.6%",
+                "logoAppearance": "55%"
+            },
+            {
+                "id": "p8",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Visa c'est le futur du gaming",
+                "author": "Sardoche",
+                "platform": "twitter",
+                "date": "2026-02-15",
+                "views": "54K",
+                "likes": "1.9K",
+                "comments": "280",
+                "engagement": "4.0%",
+                "logoAppearance": "50%"
+            },
+            {
+                "id": "p9",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Behind the scenes - Shooting Visa",
+                "author": "Michou",
+                "platform": "instagram",
+                "date": "2026-02-05",
+                "views": "102K",
+                "likes": "8.9K",
+                "comments": "670",
+                "engagement": "9.4%",
+                "logoAppearance": "95%"
+            },
+            {
+                "id": "p10",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Visa x Gentle Mates - Le recap",
+                "author": "Squeezie",
+                "platform": "instagram",
+                "date": "2026-02-20",
+                "views": "66K",
+                "likes": "5.1K",
+                "comments": "390",
+                "engagement": "8.3%",
+                "logoAppearance": "88%"
+            },
+            {
+                "id": "p11",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "POV: tu recois ta carte Visa",
+                "author": "Gotaga",
+                "platform": "tiktok",
+                "date": "2026-02-08",
+                "views": "58K",
+                "likes": "4.2K",
+                "comments": "520",
+                "engagement": "8.1%",
+                "logoAppearance": "80%"
+            },
+            {
+                "id": "p12",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Visa challenge avec la team",
+                "author": "Michou",
+                "platform": "tiktok",
+                "date": "2026-02-22",
+                "views": "42K",
+                "likes": "3.1K",
+                "comments": "410",
+                "engagement": "8.3%",
+                "logoAppearance": "70%"
+            }
+        ],
+        "brandMentions": {
+            "overview": {
+                "totalMentions": "347",
+                "positiveSentiment": "82%",
+                "neutralSentiment": "14%",
+                "negativeSentiment": "4%",
+                "topKeywords": ["Visa", "carte", "paiement", "collab", "Gentle Mates"]
+            },
+            "platformBreakdown": [
+                { "platform": "youtube", "mentions": 89, "positive": 78, "neutral": 8, "negative": 3 },
+                { "platform": "twitter", "mentions": 112, "positive": 88, "neutral": 18, "negative": 6 },
+                { "platform": "instagram", "mentions": 64, "positive": 58, "neutral": 5, "negative": 1 },
+                { "platform": "tiktok", "mentions": 52, "positive": 44, "neutral": 6, "negative": 2 },
+                { "platform": "twitch", "mentions": 30, "positive": 17, "neutral": 11, "negative": 2 }
+            ],
+            "comments": [
+                {
+                    "id": "c1",
+                    "platform": "youtube",
+                    "author": "@DarkSasuke_92",
+                    "text": "Honnêtement la carte Visa x Gentle Mates elle est trop belle, je veux la même",
+                    "likes": 342,
+                    "replies": 18,
+                    "date": "2026-01-21",
+                    "sentiment": "positive",
+                    "postTitle": "Test derniere carte Visa - Mon avis apres 2 semaines"
+                },
+                {
+                    "id": "c2",
+                    "platform": "youtube",
+                    "author": "@LeGamerDu13",
+                    "text": "La collab Visa c'est vraiment le move de l'année, GG les gars",
+                    "likes": 218,
+                    "replies": 7,
+                    "date": "2026-01-21",
+                    "sentiment": "positive",
+                    "postTitle": "Test derniere carte Visa - Mon avis apres 2 semaines"
+                },
+                {
+                    "id": "c3",
+                    "platform": "twitter",
+                    "author": "@esport_fan_fr",
+                    "text": "Visa qui s'associe avec Gentle Mates c'est super smart, le gaming c'est l'avenir du paiement",
+                    "likes": 156,
+                    "replies": 23,
+                    "date": "2026-01-23",
+                    "sentiment": "positive",
+                    "postTitle": "La carte Visa qui change tout - Thread"
+                },
+                {
+                    "id": "c4",
+                    "platform": "twitter",
+                    "author": "@tech_marie",
+                    "text": "J'ai reçu ma carte Visa Gentle Mates, le design est incroyable. Merci @Gotaga",
+                    "likes": 89,
+                    "replies": 5,
+                    "date": "2026-02-02",
+                    "sentiment": "positive",
+                    "postTitle": "Nouveau partenariat Visa x Gentle Mates"
+                },
+                {
+                    "id": "c5",
+                    "platform": "instagram",
+                    "author": "@julie.gaming",
+                    "text": "Ce shooting Visa est magnifique, la direction artistique est folle",
+                    "likes": 412,
+                    "replies": 12,
+                    "date": "2026-02-06",
+                    "sentiment": "positive",
+                    "postTitle": "Behind the scenes - Shooting Visa"
+                },
+                {
+                    "id": "c6",
+                    "platform": "youtube",
+                    "author": "@NeoPixel",
+                    "text": "Visa vs Mastercard le débat éternel, mais la collab penche clairement côté Visa là",
+                    "likes": 534,
+                    "replies": 42,
+                    "date": "2026-02-19",
+                    "sentiment": "positive",
+                    "postTitle": "Visa vs Mastercard - Le comparatif"
+                },
+                {
+                    "id": "c7",
+                    "platform": "tiktok",
+                    "author": "@zak.clips",
+                    "text": "POV tu paies avec la carte Visa Gentle Mates et tout le monde te regarde mdrr",
+                    "likes": 1203,
+                    "replies": 67,
+                    "date": "2026-02-09",
+                    "sentiment": "positive",
+                    "postTitle": "POV: tu recois ta carte Visa"
+                },
+                {
+                    "id": "c8",
+                    "platform": "twitch",
+                    "author": "xKillerZz",
+                    "text": "la carte visa gentle mates elle claque, faut avouer",
+                    "likes": 0,
+                    "replies": 0,
+                    "date": "2026-02-12",
+                    "sentiment": "positive",
+                    "postTitle": "Live Gotaga - 12 feb"
+                },
+                {
+                    "id": "c9",
+                    "platform": "twitch",
+                    "author": "StreamLover44",
+                    "text": "quelqu'un sait comment avoir la carte visa collab ?",
+                    "likes": 0,
+                    "replies": 3,
+                    "date": "2026-02-12",
+                    "sentiment": "neutral",
+                    "postTitle": "Live Gotaga - 12 feb"
+                },
+                {
+                    "id": "c10",
+                    "platform": "twitter",
+                    "author": "@random_hater",
+                    "text": "Encore une collab sponsorisée Visa, on voit que le placement de produit...",
+                    "likes": 12,
+                    "replies": 8,
+                    "date": "2026-02-16",
+                    "sentiment": "negative",
+                    "postTitle": "Visa c'est le futur du gaming"
+                },
+                {
+                    "id": "c11",
+                    "platform": "youtube",
+                    "author": "@MaxGaming_TV",
+                    "text": "Le setup avec la carte Visa en arrière-plan c'est un beau placement mais la vidéo est cool quand même",
+                    "likes": 67,
+                    "replies": 3,
+                    "date": "2026-02-11",
+                    "sentiment": "neutral",
+                    "postTitle": "Setup tour avec la nouvelle carte Visa"
+                },
+                {
+                    "id": "c12",
+                    "platform": "instagram",
+                    "author": "@clara.style",
+                    "text": "Le recap Visa x Gentle Mates donne trop envie, j'adore le concept",
+                    "likes": 289,
+                    "replies": 9,
+                    "date": "2026-02-21",
+                    "sentiment": "positive",
+                    "postTitle": "Visa x Gentle Mates - Le recap"
+                },
+                {
+                    "id": "c13",
+                    "platform": "tiktok",
+                    "author": "@funny.moments.fr",
+                    "text": "le challenge visa avec toute la team c'est le contenu qu'on veut voir plus souvent",
+                    "likes": 876,
+                    "replies": 31,
+                    "date": "2026-02-23",
+                    "sentiment": "positive",
+                    "postTitle": "Visa challenge avec la team"
+                },
+                {
+                    "id": "c14",
+                    "platform": "twitch",
+                    "author": "ChatSpammer99",
+                    "text": "VISA VISA VISA VISA",
+                    "likes": 0,
+                    "replies": 0,
+                    "date": "2026-02-14",
+                    "sentiment": "neutral",
+                    "postTitle": "Live Kameto - 14 feb"
+                },
+                {
+                    "id": "c15",
+                    "platform": "youtube",
+                    "author": "@CritiqueHonnete",
+                    "text": "Bon contenu Squeezie mais le placement Visa est un peu forcé sur ce coup",
+                    "likes": 45,
+                    "replies": 14,
+                    "date": "2026-02-04",
+                    "sentiment": "negative",
+                    "postTitle": "Visa Test - Fortnite 120fps"
+                }
+            ]
+        }
+    }
+}
