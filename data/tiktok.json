@@ -1,0 +1,124 @@
+{
+    "statsData": [
+        {
+            "label": "Followers",
+            "value": "1.2M",
+            "trend": 15.4,
+            "direction": "up",
+            "icon": "Users"
+        },
+        {
+            "label": "Video Views",
+            "value": "15.4M",
+            "trend": 45.2,
+            "direction": "up",
+            "icon": "Play"
+        },
+        {
+            "label": "Profile Views",
+            "value": "450K",
+            "trend": 12.1,
+            "direction": "up",
+            "icon": "Eye"
+        },
+        {
+            "label": "Likes",
+            "value": "2.1M",
+            "trend": 22.4,
+            "direction": "up",
+            "icon": "Heart"
+        },
+        {
+            "label": "Comments",
+            "value": "89K",
+            "trend": 5.6,
+            "direction": "up",
+            "icon": "MessageCircle"
+        },
+        {
+            "label": "Shares",
+            "value": "120K",
+            "trend": -2.3,
+            "direction": "down",
+            "icon": "Share2"
+        }
+    ],
+    "followerGrowthData": [
+        {
+            "week": "W1",
+            "followers": 1050000
+        },
+        {
+            "week": "W2",
+            "followers": 1100000
+        },
+        {
+            "week": "W3",
+            "followers": 1160000
+        },
+        { "week": "W4", "followers": 1200000 }
+    ],
+    "interactionsData": [
+        {
+            "day": "Mon",
+            "likes": 45000,
+            "shares": 5000
+        },
+        {
+            "day": "Tue",
+            "likes": 52000,
+            "shares": 6500
+        },
+        {
+            "day": "Wed",
+            "likes": 125000,
+            "shares": 15000
+        },
+        {
+            "day": "Thu",
+            "likes": 85000,
+            "shares": 9000
+        },
+        {
+            "day": "Fri",
+            "likes": 65000,
+            "shares": 7500
+        },
+        {
+            "day": "Sat",
+            "likes": 95000,
+            "shares": 11000
+        },
+        {
+            "day": "Sun",
+            "likes": 75000,
+            "shares": 8000
+        }
+    ],
+    "topTiktoks": [
+        {
+            "id": 1,
+            "title": "POV: Tu gagnes le clutch de la victoire \ud83e\udd2f",
+            "views": "4.5M",
+            "likes": "850K",
+            "comments": "12K",
+            "shares": "45K"
+        },
+        {
+            "id": 2,
+            "title": "La r\u00e9action du coach vaut de l'or \ud83d\ude02",
+            "views": "2.1M",
+            "likes": "420K",
+            "comments": "5.2K",
+            "shares": "18K"
+        },
+        {
+            "id": 3,
+            "title": "Room tour du boot camp \ud83c\udfe0\ud83d\udcbb",
+            "views": "1.8M",
+            "likes": "310K",
+            "comments": "3.8K",
+            "shares": "9K"
+        }
+    ]
+}

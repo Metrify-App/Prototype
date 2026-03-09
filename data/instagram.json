@@ -1,0 +1,146 @@
+{
+    "statsData": [
+        {
+            "label": "Followers",
+            "value": "125K",
+            "trend": 4.2,
+            "direction": "up",
+            "icon": "Users"
+        },
+        {
+            "label": "Accounts Reached",
+            "value": "2.4M",
+            "trend": 18.5,
+            "direction": "up",
+            "icon": "Eye"
+        },
+        {
+            "label": "Likes",
+            "value": "340K",
+            "trend": 8.4,
+            "direction": "up",
+            "icon": "Heart"
+        },
+        {
+            "label": "Comments",
+            "value": "12.4K",
+            "trend": -1.2,
+            "direction": "down",
+            "icon": "MessageCircle"
+        },
+        {
+            "label": "Saves",
+            "value": "45K",
+            "trend": 24.1,
+            "direction": "up",
+            "icon": "Bookmark"
+        },
+        {
+            "label": "Shares",
+            "value": "89K",
+            "trend": 15.3,
+            "direction": "up",
+            "icon": "Navigation"
+        }
+    ],
+    "followerGrowthData": [
+        {
+            "month": "Jan",
+            "followers": 100000
+        },
+        {
+            "month": "Feb",
+            "followers": 105000
+        },
+        {
+            "month": "Mar",
+            "followers": 112000
+        },
+        {
+            "month": "Apr",
+            "followers": 115000
+        },
+        {
+            "month": "May",
+            "followers": 118000
+        },
+        {
+            "month": "Jun",
+            "followers": 125000
+        }
+    ],
+    "reachData": [
+        {
+            "day": "Mon",
+            "reels": 45000,
+            "posts": 12000,
+            "stories": 25000
+        },
+        {
+            "day": "Tue",
+            "reels": 52000,
+            "posts": 14000,
+            "stories": 28000
+        },
+        {
+            "day": "Wed",
+            "reels": 48000,
+            "posts": 11000,
+            "stories": 24000
+        },
+        {
+            "day": "Thu",
+            "reels": 61000,
+            "posts": 16000,
+            "stories": 32000
+        },
+        {
+            "day": "Fri",
+            "reels": 75000,
+            "posts": 18000,
+            "stories": 35000
+        },
+        {
+            "day": "Sat",
+            "reels": 82000,
+            "posts": 21000,
+            "stories": 40000
+        },
+        {
+            "day": "Sun",
+            "reels": 68000,
+            "posts": 15000,
+            "stories": 30000
+        }
+    ],
+    "topPosts": [
+        {
+            "id": 1,
+            "type": "Reel",
+            "text": "Behind the scenes du dernier shooting 📸...",
+            "reach": "450K",
+            "engagement": "9.2%",
+            "likes": "45K",
+            "comments": "1.2K"
+        },
+        {
+            "id": 2,
+            "type": "Carousel",
+            "text": "Nouveau drop dispo ce soir 🔥...",
+            "reach": "280K",
+            "engagement": "8.4%",
+            "likes": "28K",
+            "comments": "850"
+        },
+        {
+            "id": 3,
+            "type": "Photo",
+            "text": "Victoire ! Merci pour votre soutien 🏆",
+            "reach": "310K",
+            "engagement": "10.1%",
+            "likes": "52K",
+            "comments": "2.1K"
+        }
+    ]
+}
+

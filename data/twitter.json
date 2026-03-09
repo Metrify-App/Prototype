@@ -1,0 +1,162 @@
+{
+    "statsData": [
+        {
+            "label": "Followers",
+            "value": "32.4K",
+            "trend": 9.8,
+            "direction": "up",
+            "icon": "Users"
+        },
+        {
+            "label": "Impressions",
+            "value": "1.24M",
+            "trend": 15.2,
+            "direction": "up",
+            "icon": "Eye"
+        },
+        {
+            "label": "Likes",
+            "value": "45.2K",
+            "trend": 12.4,
+            "direction": "up",
+            "icon": "Heart"
+        },
+        {
+            "label": "Retweets",
+            "value": "8.9K",
+            "trend": -3.2,
+            "direction": "down",
+            "icon": "Repeat"
+        },
+        {
+            "label": "Replies",
+            "value": "3.2K",
+            "trend": 7.8,
+            "direction": "up",
+            "icon": "MessageCircle"
+        },
+        {
+            "label": "Mentions",
+            "value": "1.8K",
+            "trend": 22.1,
+            "direction": "up",
+            "icon": "AtSign"
+        }
+    ],
+    "followerGrowthData": [
+        {
+            "month": "Jan",
+            "followers": 10000
+        },
+        {
+            "month": "Feb",
+            "followers": 12500
+        },
+        {
+            "month": "Mar",
+            "followers": 15000
+        },
+        {
+            "month": "Apr",
+            "followers": 16500
+        },
+        {
+            "month": "May",
+            "followers": 18000
+        },
+        {
+            "month": "Jun",
+            "followers": 20000
+        },
+        {
+            "month": "Jul",
+            "followers": 23000
+        },
+        {
+            "month": "Aug",
+            "followers": 25000
+        },
+        {
+            "month": "Sep",
+            "followers": 28000
+        },
+        {
+            "month": "Oct",
+            "followers": 30000
+        },
+        {
+            "month": "Nov",
+            "followers": 31000
+        },
+        {
+            "month": "Dec",
+            "followers": 32400
+        }
+    ],
+    "engagementData": [
+        {
+            "day": "Mon",
+            "likes": 1200,
+            "retweets": 400,
+            "replies": 200
+        },
+        {
+            "day": "Tue",
+            "likes": 1600,
+            "retweets": 450,
+            "replies": 300
+        },
+        {
+            "day": "Wed",
+            "likes": 1300,
+            "retweets": 350,
+            "replies": 200
+        },
+        {
+            "day": "Thu",
+            "likes": 1900,
+            "retweets": 500,
+            "replies": 350
+        },
+        {
+            "day": "Fri",
+            "likes": 2100,
+            "retweets": 600,
+            "replies": 400
+        },
+        {
+            "day": "Sat",
+            "likes": 1650,
+            "retweets": 480,
+            "replies": 280
+        },
+        {
+            "day": "Sun",
+            "likes": 1400,
+            "retweets": 400,
+            "replies": 250
+        }
+    ],
+    "topTweets": [
+        {
+            "id": 1,
+            "text": "ON EST CHAMPIONS DU MAJOR DE BOSTON ! GG a toute la team...",
+            "impressions": "591.9K",
+            "engagement": "8.2%",
+            "likes": "24.3K",
+            "retweets": "5.8K",
+            "replies": "1.2K"
+        },
+        {
+            "id": 2,
+            "text": "Nouveau roster reveal demain 18h, stay tuned...",
+            "impressions": "324.5K",
+            "engagement": "6.4%",
+            "likes": "12.1K",
+            "retweets": "3.2K",
+            "replies": "892"
+        },
+        { "id": 3, "text": "GG @TeamVitality ! Quel match incroyable, on revient plus fort", "impressions": "186.2K", "engagement": "5.8%", "likes": "8.4K", "retweets": "1.9K", "replies": "456" }
+    ]
+}
+

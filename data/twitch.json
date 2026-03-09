@@ -1,0 +1,109 @@
+{
+    "statsData": [
+        {
+            "label": "Followers",
+            "value": "450K",
+            "trend": 5.2,
+            "direction": "up",
+            "icon": "Users"
+        },
+        {
+            "label": "Avg Viewers",
+            "value": "12.4K",
+            "trend": 18.5,
+            "direction": "up",
+            "icon": "Eye"
+        },
+        {
+            "label": "Peak Viewers",
+            "value": "28.5K",
+            "trend": 4.1,
+            "direction": "up",
+            "icon": "TrendingUp"
+        },
+        {
+            "label": "Hours Watched",
+            "value": "450K",
+            "trend": 12.0,
+            "direction": "up",
+            "icon": "Play"
+        },
+        {
+            "label": "Subscriptions",
+            "value": "4.2K",
+            "trend": -2.1,
+            "direction": "down",
+            "icon": "Star"
+        },
+        {
+            "label": "Chat Messages",
+            "value": "1.2M",
+            "trend": 25.3,
+            "direction": "up",
+            "icon": "MessageSquare"
+        }
+    ],
+    "viewersData": [
+        {
+            "day": "Mon",
+            "avg": 10000,
+            "max": 15000
+        },
+        {
+            "day": "Tue",
+            "avg": 11500,
+            "max": 18000
+        },
+        {
+            "day": "Wed",
+            "avg": 9000,
+            "max": 14000
+        },
+        {
+            "day": "Thu",
+            "avg": 12000,
+            "max": 21000
+        },
+        {
+            "day": "Fri",
+            "avg": 14000,
+            "max": 25000
+        },
+        {
+            "day": "Sat",
+            "avg": 18000,
+            "max": 28500
+        },
+        {
+            "day": "Sun",
+            "avg": 16000,
+            "max": 24000
+        }
+    ],
+    "topStreams": [
+        {
+            "id": 1,
+            "title": "SOIRÉE TOURNOI AVEC LA TEAM",
+            "category": "VALORANT",
+            "maxViewers": "28.5K",
+            "avgViewers": "18K",
+            "duration": "4h 30m"
+        },
+        {
+            "id": 2,
+            "title": "On teste le nouveau patch",
+            "category": "League of Legends",
+            "maxViewers": "19.2K",
+            "avgViewers": "13.5K",
+            "duration": "5h 15m"
+        },
+        {
+            "id": 3,
+            "title": "Just Chatting & React",
+            "category": "Just Chatting",
+            "maxViewers": "15.4K",
+            "avgViewers": "11.2K",
+            "duration": "3h 00m"
+        }
+    ]
+}

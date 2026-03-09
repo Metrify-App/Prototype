@@ -1,0 +1,108 @@
+{
+    "statsData": [
+        {
+            "label": "Subscribers",
+            "value": "890.5K",
+            "trend": 2.1,
+            "direction": "up",
+            "icon": "Users"
+        },
+        {
+            "label": "Views",
+            "value": "4.2M",
+            "trend": 15.4,
+            "direction": "up",
+            "icon": "Eye"
+        },
+        {
+            "label": "Watch time",
+            "value": "240K",
+            "trend": 10.2,
+            "direction": "up",
+            "icon": "Clock"
+        },
+        {
+            "label": "Likes",
+            "value": "150K",
+            "trend": -4.5,
+            "direction": "down",
+            "icon": "ThumbsUp"
+        },
+        {
+            "label": "Comments",
+            "value": "15.2K",
+            "trend": 8.7,
+            "direction": "up",
+            "icon": "MessageCircle"
+        },
+        {
+            "label": "Shares",
+            "value": "8.4K",
+            "trend": 12.1,
+            "direction": "up",
+            "icon": "Share2"
+        }
+    ],
+    "subData": [
+        {
+            "week": "W1",
+            "subs": 850000
+        },
+        {
+            "week": "W2",
+            "subs": 865000
+        },
+        {
+            "week": "W3",
+            "subs": 875000
+        },
+        {
+            "week": "W4",
+            "subs": 890500
+        }
+    ],
+    "viewsData": [
+        {
+            "source": "Search",
+            "views": 1200000
+        },
+        {
+            "source": "Suggested",
+            "views": 1800000
+        },
+        {
+            "source": "Subscriptions",
+            "views": 800000
+        },
+        {
+            "source": "External",
+            "views": 400000
+        }
+    ],
+    "topVideos": [
+        {
+            "id": 1,
+            "title": "Tournoi VALORANT VCT - Finale",
+            "views": "1.2M",
+            "watchTime": "85K h",
+            "likes": "45K",
+            "ctr": "8.5%"
+        },
+        {
+            "id": 2,
+            "title": "Setup Tour 2026 !",
+            "views": "890K",
+            "watchTime": "42K h",
+            "likes": "52K",
+            "ctr": "11.2%"
+        },
+        {
+            "id": 3,
+            "title": "Découverte du nouveau jeu",
+            "views": "450K",
+            "watchTime": "15K h",
+            "likes": "21K",
+            "ctr": "6.4%"
+        }
+    ]
+}
