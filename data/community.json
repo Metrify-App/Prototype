@@ -1,0 +1,58 @@
+{
+    "stats": [
+        {
+            "label": "Total Audience", "value": "2.8M", "trend": 12.4, "direction": "up", "icon": "Users"
+        },
+        {
+            "label": "Avg. Engagement", "value": "6.2%", "trend": 1.5, "direction": "up", "icon": "Activity"
+        },
+        {
+            "label": "Total Mentions", "value": "12.4K", "trend": -2.1, "direction": "down", "icon": "AtSign"
+        },
+        {
+            "label": "Posts Published", "value": "148", "trend": 15.0, "direction": "up", "icon": "Send"
+        }
+    ],
+    "platformData": [
+        {
+            "platform": "Instagram", "audience": 1250000, "engagement": 8.4
+        },
+        {
+            "platform": "TikTok", "audience": 1200000, "engagement": 9.2
+        },
+        {
+            "platform": "YouTube", "audience": 890500, "engagement": 5.8
+        },
+        {
+            "platform": "Twitch", "audience": 450000, "engagement": 6.5
+        },
+        {
+            "platform": "Twitter", "audience": 32400, "engagement": 4.1
+        }
+    ],
+    "recentMentions": [
+        {
+            "id": 1, "platform": "Twitter", "user": "@fan_esports", "message": "When is the next match for the Valorant roster?", "sentiment": "neutral", "status": "pending", "time": "10m ago"
+        },
+        {
+            "id": 2, "platform": "Instagram", "user": "gaming_dude", "message": "Super moment !", "sentiment": "positive", "status": "replied", "time": "1h ago"
+        },
+        {
+            "id": 3, "platform": "TikTok", "user": "clutch_king", "message": "Can you do a tutorial on that crosshair?", "sentiment": "neutral", "status": "pending", "time": "2h ago"
+        },
+        {
+            "id": 4, "platform": "Twitter", "user": "@angry_viewer", "message": "The stream quality was terrible today, fix your internet...", "sentiment": "negative", "status": "escalated", "time": "3h ago"
+        }
+    ],
+    "scheduledPosts": [
+        {
+            "id": 1, "platform": "Twitter", "content": "Match Day! We are playing against Team Liquid tonight...", "date": "Today, 18:00", "type": "Announcement"
+        },
+        {
+            "id": 2, "platform": "Instagram", "content": "Behind the scenes with the LoL team", "date": "Tomorrow, 12:00", "type": "Photo Carousel"
+        },
+        {
+            "id": 3, "platform": "TikTok", "content": "Meilleur moment de la semaine #clutch #valorant", "date": "Tomorrow, 17:30", "type": "Video"
+        }
+    ]
+}
