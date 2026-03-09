@@ -6,7 +6,8 @@
             "totalFollowers": "+2,340",
             "engagementRate": "4.8%",
             "totalPosts": "12",
-            "logoAppearance": "78%"
+            "logoAppearance": "78%",
+            "vocalMentions": "14"
         },
         "platformStats": [
             {
@@ -16,7 +17,8 @@
                 "engagement": "5.1%",
                 "posts": 5,
                 "mediaValue": "$9,800",
-                "logoAppearance": "82%"
+                "logoAppearance": "82%",
+                "vocalMentions": "6"
             },
             {
                 "platform": "twitter",
@@ -25,7 +27,8 @@
                 "engagement": "3.8%",
                 "posts": 3,
                 "mediaValue": "$3,200",
-                "logoAppearance": "65%"
+                "logoAppearance": "65%",
+                "vocalMentions": "0"
             },
             {
                 "platform": "instagram",
@@ -34,7 +37,8 @@
                 "engagement": "6.2%",
                 "posts": 2,
                 "mediaValue": "$3,450",
-                "logoAppearance": "91%"
+                "logoAppearance": "91%",
+                "vocalMentions": "2"
             },
             {
                 "platform": "tiktok",
@@ -43,7 +47,18 @@
                 "engagement": "4.1%",
                 "posts": 2,
                 "mediaValue": "$2,000",
-                "logoAppearance": "73%"
+                "logoAppearance": "73%",
+                "vocalMentions": "3"
+            },
+            {
+                "platform": "twitch",
+                "views": "45K",
+                "followers": "+42",
+                "engagement": "7.5%",
+                "posts": 1,
+                "mediaValue": "$0",
+                "logoAppearance": "45%",
+                "vocalMentions": "3"
             }
         ],
         "engagementOverTime": {
@@ -63,7 +78,8 @@
                 "likes": "12.3K",
                 "comments": "1.8K",
                 "engagement": "5.7%",
-                "logoAppearance": "85%"
+                "logoAppearance": "85%",
+                "vocalMentions": "3"
             },
             {
                 "id": "p2",
@@ -76,7 +92,8 @@
                 "likes": "9.1K",
                 "comments": "920",
                 "engagement": "5.3%",
-                "logoAppearance": "72%"
+                "logoAppearance": "72%",
+                "vocalMentions": "2"
             },
             {
                 "id": "p3",
@@ -89,7 +106,8 @@
                 "likes": "28.4K",
                 "comments": "3.2K",
                 "engagement": "6.2%",
-                "logoAppearance": "90%"
+                "logoAppearance": "90%",
+                "vocalMentions": "1"
             },
             {
                 "id": "p4",
@@ -102,7 +120,8 @@
                 "likes": "4.8K",
                 "comments": "560",
                 "engagement": "5.5%",
-                "logoAppearance": "68%"
+                "logoAppearance": "68%",
+                "vocalMentions": "0"
             },
             {
                 "id": "p5",
@@ -115,7 +134,8 @@
                 "likes": "15.6K",
                 "comments": "2.1K",
                 "engagement": "5.5%",
-                "logoAppearance": "88%"
+                "logoAppearance": "88%",
+                "vocalMentions": "0"
             },
             {
                 "id": "p6",
@@ -128,7 +148,8 @@
                 "likes": "3.2K",
                 "comments": "450",
                 "engagement": "4.1%",
-                "logoAppearance": "60%"
+                "logoAppearance": "60%",
+                "vocalMentions": "0"
             },
             {
                 "id": "p7",
@@ -141,7 +162,8 @@
                 "likes": "2.8K",
                 "comments": "310",
                 "engagement": "4.6%",
-                "logoAppearance": "55%"
+                "logoAppearance": "55%",
+                "vocalMentions": "0"
             },
             {
                 "id": "p8",
@@ -154,7 +176,8 @@
                 "likes": "1.9K",
                 "comments": "280",
                 "engagement": "4.0%",
-                "logoAppearance": "50%"
+                "logoAppearance": "50%",
+                "vocalMentions": "0"
             },
             {
                 "id": "p9",
@@ -167,7 +190,8 @@
                 "likes": "8.9K",
                 "comments": "670",
                 "engagement": "9.4%",
-                "logoAppearance": "95%"
+                "logoAppearance": "95%",
+                "vocalMentions": "1"
             },
             {
                 "id": "p10",
@@ -180,7 +204,8 @@
                 "likes": "5.1K",
                 "comments": "390",
                 "engagement": "8.3%",
-                "logoAppearance": "88%"
+                "logoAppearance": "88%",
+                "vocalMentions": "1"
             },
             {
                 "id": "p11",
@@ -193,7 +218,8 @@
                 "likes": "4.2K",
                 "comments": "520",
                 "engagement": "8.1%",
-                "logoAppearance": "80%"
+                "logoAppearance": "80%",
+                "vocalMentions": "2"
             },
             {
                 "id": "p12",
@@ -206,7 +232,46 @@
                 "likes": "3.1K",
                 "comments": "410",
                 "engagement": "8.3%",
-                "logoAppearance": "70%"
+                "logoAppearance": "70%",
+                "vocalMentions": "1"
+            }
+        ],
+        "vocalClips": [
+            {
+                "id": "vc1",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Unboxing the new Visa x Gentle Mates card",
+                "author": "Michou",
+                "platform": "youtube",
+                "timestamp": "02:45",
+                "transcript": "...and as you can see, the Visa logo on the card is just stunning..."
+            },
+            {
+                "id": "vc2",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Live training session with the team",
+                "author": "Gotaga",
+                "platform": "twitch",
+                "timestamp": "12:10",
+                "transcript": "...don't forget to use your Visa card for the next merch drop guys..."
+            },
+            {
+                "id": "vc3",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "Setup tour 2026",
+                "author": "Kameto",
+                "platform": "youtube",
+                "timestamp": "05:22",
+                "transcript": "...this setup was partially funded through our partnership with Visa..."
+            },
+            {
+                "id": "vc4",
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "title": "POV: receiving the exclusive card",
+                "author": "Gotaga",
+                "platform": "tiktok",
+                "timestamp": "00:12",
+                "transcript": "Just received the new Visa card, it's a banger!"
             }
         ],
         "brandMentions": {

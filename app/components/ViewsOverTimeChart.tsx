@@ -15,14 +15,14 @@ export function ViewsOverTimeChart({ data }: ViewsOverTimeChartProps) {
     } satisfies ChartConfig;
 
     return (
-        <Card className="col-span-2">
+        <Card>
             <CardHeader>
                 <CardTitle className="text-base">Views over time</CardTitle>
             </CardHeader>
             <CardContent>
                 <ChartContainer
                     config={config}
-                    className="aspect-[16/6] w-full"
+                    className="aspect-[16/9] w-full"
                 >
                     <BarChart
                         data={data}

@@ -1,5 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
+'use client';
+
+import { use } from 'react';
+import { Cell, Pie, PieChart, Tooltip } from 'recharts';
 import {
     ArrowLeft,
     DollarSign,
@@ -14,8 +16,16 @@ import {
     MessagesSquare,
     ThumbsUp,
     Minus,
-    ThumbsDown
+    ThumbsDown,
+    Download,
+    Mic,
+    Trophy,
+    Share2,
+    Play
 } from 'lucide-react';
+
+import Link from 'next/link';
+import Image from 'next/image';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/app/components/ui/table';
@@ -57,7 +67,7 @@ const SENTIMENT_CONFIG = {
 } as const;
 
 function formatDate(dateStr: string) {
-    return new Date(dateStr).toLocaleDateString('fr-FR', {
+    return new Date(dateStr).toLocaleDateString('en-US', {
         day: 'numeric',
         month: 'short',
         year: 'numeric'
@@ -94,7 +104,7 @@ function StatCard({
     );
 }
 
-function LogoAppearanceRing({ percentage }: { percentage: number }) {
+function LogoAppearanceRing({ percentage, label = 'Logo visibility' }: { percentage: number; label?: string }) {
     const radius = 40;
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - (percentage / 100) * circumference;
@@ -105,7 +115,7 @@ function LogoAppearanceRing({ percentage }: { percentage: number }) {
                 width="100"
                 height="100"
                 viewBox="0 0 100 100"
-                aria-label={`Visibilité du logo : ${percentage}%`}
+                aria-label={`${label} : ${percentage}%`}
                 role="img"
             >
                 <circle
@@ -138,16 +148,16 @@ function LogoAppearanceRing({ percentage }: { percentage: number }) {
                     {percentage}%
                 </text>
             </svg>
-            <p className="text-xs text-[var(--text-muted)]">Logo visibility</p>
+            <p className="text-xs text-[var(--text-muted)]">{label}</p>
         </div>
     );
 }
 
-export default async function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    const { id } = await params;
+export default function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params);
 
     const project = projectsData.projects.find(p => p.id === id);
-    const details = (projectDetails as Record<string, (typeof projectDetails)['1']>)[id];
+    const details = (projectDetails as any)[id];
 
     if (!project || !details) {
         return (
@@ -180,9 +190,16 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         fill: PLATFORM_COLORS[s.platform]
     }));
 
+    const bestLogoPlatform = details.platformStats.reduce((prev: any, curr: any) =>
+        parseInt(curr.logoAppearance) > parseInt(prev.logoAppearance) ? curr : prev
+    );
+    const bestVocalPlatform = details.platformStats.reduce((prev: any, curr: any) =>
+        (curr.vocalMentions || 0) > (prev.vocalMentions || 0) ? curr : prev
+    );
+
     return (
         <div className="mx-auto max-w-7xl">
-            {/* Back + Header */}
+            {/* Top Navigation */}
             <Link
                 href="/partnerships/projects"
                 className="flex items-center gap-2 text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
@@ -191,34 +208,51 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 Back to projects
             </Link>
 
-            <div className="mt-6 flex items-center gap-4">
-                {project.logo ? (
-                    <div className="relative h-14 w-14 overflow-hidden rounded-xl">
-                        <Image
-                            src={project.logo}
-                            alt={`Logo ${project.name}`}
-                            fill
-                            className="object-cover"
-                            sizes="56px"
-                            priority
-                        />
+            {/* Header with Title and Actions */}
+            <div className="mt-6 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                    {project.logo ? (
+                        <div className="relative h-14 w-14 overflow-hidden rounded-xl">
+                            <Image
+                                src={project.logo}
+                                alt={`${project.name} logo`}
+                                fill
+                                className="object-cover"
+                                sizes="56px"
+                                priority
+                            />
+                        </div>
+                    ) : (
+                        <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[var(--sidebar-active)] text-lg font-bold">
+                            {project.name.charAt(0)}
+                        </div>
+                    )}
+                    <div>
+                        <h1 className="text-3xl font-bold">{project.name}</h1>
+                        <div className="flex items-center gap-1 text-sm text-[var(--text-muted)]">
+                            <Calendar size={14} />
+                            {formatDate(project.startDate)} - {project.endDate ? formatDate(project.endDate) : 'In progress'}
+                        </div>
                     </div>
-                ) : (
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[var(--sidebar-active)] text-lg font-bold">
-                        {project.name.charAt(0)}
-                    </div>
-                )}
-                <div>
-                    <h1 className="text-3xl font-bold">{project.name}</h1>
-                    <div className="flex items-center gap-1 text-sm text-[var(--text-muted)]">
-                        <Calendar size={14} />
-                        {formatDate(project.startDate)} - {project.endDate ? formatDate(project.endDate) : 'En cours'}
-                    </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                    <button className="flex items-center gap-2 rounded-lg border border-[var(--border-light)] bg-transparent px-4 py-2 text-sm font-medium text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-primary)]">
+                        <Share2 size={16} />
+                        Share
+                    </button>
+                    <button className="flex items-center gap-2 rounded-lg bg-[var(--text-primary)] px-4 py-2 text-sm font-medium text-[var(--bg-card)] transition-opacity hover:opacity-90">
+                        <Download size={16} />
+                        Export
+                    </button>
                 </div>
             </div>
 
-            {/* Global stats */}
-            <div className="mt-8 grid grid-cols-6 gap-4">
+            {/* SECTION 1: GENERAL PERFORMANCE */}
+            <h2 className="mt-10 text-xl font-bold">General Performance</h2>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">Core metrics regarding reach, engagement and media value.</p>
+
+            <div className="mt-4 grid grid-cols-5 gap-4">
                 <StatCard
                     icon={DollarSign}
                     label="Media Value"
@@ -244,50 +278,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                     label="Posts"
                     value={details.overview.totalPosts}
                 />
-                <StatCard
-                    icon={ScanEye}
-                    label="Logo Visibility"
-                    value={details.overview.logoAppearance}
-                />
             </div>
 
-            {/* Row 1: Views over time + Logo appearance */}
-            <div className="mt-6 grid grid-cols-3 gap-6">
-                <ViewsOverTimeChart data={viewsChartData} />
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="text-base">Brand logo by platform</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex flex-col items-center justify-center gap-6">
-                        <LogoAppearanceRing percentage={parseInt(details.overview.logoAppearance)} />
-                        <div className="w-full space-y-2">
-                            {details.platformStats.map(s => {
-                                const Icon = PLATFORM_ICONS[s.platform];
-                                return (
-                                    <div
-                                        key={s.platform}
-                                        className="flex items-center justify-between text-sm"
-                                    >
-                                        <div className="flex items-center gap-2">
-                                            {Icon && (
-                                                <Icon
-                                                    size={14}
-                                                    className="text-[var(--text-muted)]"
-                                                />
-                                            )}
-                                            <span className="text-[var(--text-secondary)]">{PLATFORM_LABELS[s.platform]}</span>
-                                        </div>
-                                        <span className="font-medium">{s.logoAppearance}</span>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </CardContent>
-                </Card>
-            </div>
-
-            {/* Row 2: Views by platform + Platform breakdown table */}
             <div className="mt-6 grid grid-cols-2 gap-6">
                 <ViewsByPlatformChart
                     data={platformViewsData}
@@ -296,7 +288,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
                 <Card>
                     <CardHeader>
-                        <CardTitle className="text-base">Platform breakdown</CardTitle>
+                        <CardTitle className="text-base">Platform Breakdown</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <Table>
@@ -310,7 +302,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
-                                {details.platformStats.map(s => {
+                                {details.platformStats.map((s: any) => {
                                     const Icon = PLATFORM_ICONS[s.platform];
                                     return (
                                         <TableRow key={s.platform}>
@@ -342,10 +334,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </Card>
             </div>
 
-            {/* Row 3: Posts list */}
+            <div className="mt-6 grid grid-cols-2 gap-6">
+                <ViewsOverTimeChart data={viewsChartData} />
+            </div>
+
             <Card className="mt-6">
-                <CardHeader>
-                    <CardTitle className="text-base">All mentions ({details.posts.length})</CardTitle>
+                <CardHeader className="flex flex-row items-center justify-between">
+                    <CardTitle className="text-base">All Content ({details.posts.length})</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <Table>
@@ -355,24 +350,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                 <TableHead className="font-normal text-[var(--text-muted)]">Author</TableHead>
                                 <TableHead className="font-normal text-[var(--text-muted)]">Date</TableHead>
                                 <TableHead className="text-right font-normal text-[var(--text-muted)]">Views</TableHead>
-                                <TableHead className="text-right font-normal text-[var(--text-muted)]">
-                                    <Heart
-                                        size={13}
-                                        className="ml-auto"
-                                    />
-                                </TableHead>
-                                <TableHead className="text-right font-normal text-[var(--text-muted)]">
-                                    <MessageCircle
-                                        size={13}
-                                        className="ml-auto"
-                                    />
-                                </TableHead>
                                 <TableHead className="text-right font-normal text-[var(--text-muted)]">Eng.</TableHead>
                                 <TableHead className="text-right font-normal text-[var(--text-muted)]">Logo</TableHead>
+                                <TableHead className="text-right font-normal text-[var(--text-muted)]">Speech</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {details.posts.map(post => {
+                            {details.posts.map((post: any) => {
                                 const Icon = PLATFORM_ICONS[post.platform];
                                 return (
                                     <TableRow key={post.id}>
@@ -401,8 +385,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                         <TableCell className="text-sm text-[var(--text-secondary)]">{post.author}</TableCell>
                                         <TableCell className="text-sm text-[var(--text-muted)]">{formatDate(post.date)}</TableCell>
                                         <TableCell className="text-right text-sm">{post.views}</TableCell>
-                                        <TableCell className="text-right text-sm">{post.likes}</TableCell>
-                                        <TableCell className="text-right text-sm">{post.comments}</TableCell>
                                         <TableCell className="text-right text-sm">{post.engagement}</TableCell>
                                         <TableCell className="text-right">
                                             <span
@@ -410,6 +392,15 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                             >
                                                 {post.logoAppearance}
                                             </span>
+                                        </TableCell>
+                                        <TableCell className="text-right">
+                                            <div className="flex items-center justify-end gap-1 text-sm font-medium">
+                                                <Mic
+                                                    size={12}
+                                                    className="text-[var(--text-muted)]"
+                                                />
+                                                {post.vocalMentions || 0}
+                                            </div>
                                         </TableCell>
                                     </TableRow>
                                 );
@@ -419,13 +410,221 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 </CardContent>
             </Card>
 
-            {/* Brand mentions / Community feedback */}
+            {/* SECTION 2: BRAND VISIBILITY */}
+            <h2 className="mt-10 text-xl font-bold">Brand Visibility</h2>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">AI-powered analysis of brand logo exposure and verbal mentions.</p>
+
+            <div className="mt-4 grid grid-cols-4 gap-4">
+                <StatCard
+                    icon={ScanEye}
+                    label="Avg. Logo Visibility"
+                    value={details.overview.logoAppearance}
+                />
+                <StatCard
+                    icon={Mic}
+                    label="Total Vocal Mentions"
+                    value={details.overview.vocalMentions || '0'}
+                />
+                <StatCard
+                    icon={Trophy}
+                    label="Best Platform (Logo)"
+                    value={PLATFORM_LABELS[bestLogoPlatform.platform]}
+                />
+                <StatCard
+                    icon={Trophy}
+                    label="Best Platform (Vocal)"
+                    value={PLATFORM_LABELS[bestVocalPlatform.platform]}
+                />
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-6">
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base">Logo Exposure Breakdown</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex flex-col items-center justify-center gap-8 py-6">
+                        <LogoAppearanceRing percentage={parseInt(details.overview.logoAppearance)} />
+                        <div className="w-full space-y-3">
+                            {details.platformStats.map((s: any) => {
+                                const Icon = PLATFORM_ICONS[s.platform];
+                                return (
+                                    <div
+                                        key={s.platform}
+                                        className="flex items-center justify-between text-sm"
+                                    >
+                                        <div className="flex w-28 items-center gap-2">
+                                            {Icon && (
+                                                <Icon
+                                                    size={14}
+                                                    className="text-[var(--text-muted)]"
+                                                />
+                                            )}
+                                            <span className="text-[var(--text-secondary)]">{PLATFORM_LABELS[s.platform]}</span>
+                                        </div>
+                                        <div className="flex items-center gap-3 flex-1 pr-4">
+                                            <div className="h-1.5 flex-1 rounded-full bg-[var(--bg-primary)] overflow-hidden">
+                                                <div
+                                                    className="h-full bg-[var(--text-primary)]"
+                                                    style={{ width: s.logoAppearance }}
+                                                />
+                                            </div>
+                                        </div>
+                                        <span className="font-medium w-12 text-right">{s.logoAppearance}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </CardContent>
+                </Card>
+
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-base">Vocal Recognition Analysis</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pb-6 pt-2 flex flex-col items-center">
+                        <div className="h-[200px] w-full relative flex items-center justify-center">
+                            <PieChart
+                                width={220}
+                                height={220}
+                            >
+                                <Tooltip
+                                    cursor={false}
+                                    content={({ active, payload }) => {
+                                        if (active && payload && payload.length) {
+                                            const data = payload[0].payload;
+                                            return (
+                                                <div className="rounded-lg border border-[var(--border-light)] bg-[var(--bg-card)] p-2 shadow-md">
+                                                    <div className="flex items-center gap-2">
+                                                        <div
+                                                            className="h-2 w-2 rounded-full"
+                                                            style={{ backgroundColor: data.fill }}
+                                                        />
+                                                        <span className="text-xs font-medium text-[var(--text-primary)]">
+                                                            {PLATFORM_LABELS[data.name as string]}
+                                                        </span>
+                                                        <span className="text-xs font-bold text-[var(--text-primary)]">{payload[0].value}</span>
+                                                    </div>
+                                                </div>
+                                            );
+                                        }
+                                        return null;
+                                    }}
+                                />
+                                <Pie
+                                    data={details.platformStats.map((s: any) => ({
+                                        name: s.platform,
+                                        value: parseInt(s.vocalMentions) || 0,
+                                        fill: PLATFORM_COLORS[s.platform]
+                                    }))}
+                                    dataKey="value"
+                                    nameKey="name"
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius={55}
+                                    outerRadius={80}
+                                    strokeWidth={3}
+                                    stroke="var(--bg-card)"
+                                    paddingAngle={2}
+                                    isAnimationActive={true}
+                                >
+                                    {details.platformStats.map((s: any, index: number) => (
+                                        <Cell
+                                            key={`cell-${index}`}
+                                            fill={PLATFORM_COLORS[s.platform]}
+                                            className="outline-none"
+                                        />
+                                    ))}
+                                </Pie>
+                            </PieChart>
+                            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                                <span className="text-2xl font-bold block text-[var(--text-primary)] leading-none">
+                                    {details.overview.vocalMentions}
+                                </span>
+                                <span className="text-[9px] uppercase tracking-tighter text-[var(--text-muted)] font-semibold mt-0.5">Mentions</span>
+                            </div>
+                        </div>
+                        <div className="mt-2 grid grid-cols-2 gap-x-12 gap-y-1.5 w-full px-8">
+                            {details.platformStats.map((s: any) => (
+                                <div
+                                    key={s.platform}
+                                    className="flex items-center gap-2 text-sm"
+                                >
+                                    <div
+                                        className="h-2.5 w-2.5 rounded-full"
+                                        style={{ backgroundColor: PLATFORM_COLORS[s.platform] }}
+                                    />
+                                    <span className="text-[var(--text-secondary)] font-medium">{PLATFORM_LABELS[s.platform]}</span>
+                                    <span className="text-[var(--text-muted)] ml-auto font-mono">{s.vocalMentions || 0}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+
+            {/* Vocal Clips Section */}
+            {details.vocalClips && (
+                <Card className="mt-6">
+                    <CardHeader>
+                        <CardTitle className="text-base">Speech Recognition Clips ({details.vocalClips.length})</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="grid grid-cols-4 gap-6">
+                            {details.vocalClips.map((clip: any) => {
+                                const Icon = PLATFORM_ICONS[clip.platform];
+                                return (
+                                    <div
+                                        key={clip.id}
+                                        className="flex flex-col group cursor-pointer"
+                                    >
+                                        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black mb-3">
+                                            <Image
+                                                src={clip.thumbnail}
+                                                alt={clip.title}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 768px) 100vw, 25vw"
+                                            />
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black/30 backdrop-blur-sm text-white border border-white/20">
+                                                    <Play
+                                                        size={16}
+                                                        fill="white"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/80 text-[11px] font-medium text-white">
+                                                {clip.timestamp}
+                                            </div>
+                                        </div>
+
+                                        <div className="flex gap-3 px-1">
+                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--bg-primary)] border border-[var(--border-light)] overflow-hidden">
+                                                {Icon && (
+                                                    <Icon
+                                                        size={16}
+                                                        className="text-[var(--text-primary)]"
+                                                    />
+                                                )}
+                                            </div>
+                                            <div className="flex flex-col min-w-0">
+                                                <h4 className="text-sm font-bold leading-tight line-clamp-2 mb-1">{clip.title}</h4>
+                                                <span className="text-[12px] text-[var(--text-muted)] font-medium">{clip.author}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+
+            {/* SECTION 3: COMMUNITY FEEDBACK */}
             {details.brandMentions && (
                 <>
-                    <h2 className="mt-10 text-xl font-bold">Community feedback</h2>
-                    <p className="mt-1 text-sm text-[var(--text-muted)]">
-                        Comments, replies and chat messages mentioning the brand across all platforms.
-                    </p>
+                    <h2 className="mt-10 text-xl font-bold">Community Feedback</h2>
+                    <p className="mt-1 text-sm text-[var(--text-muted)]">Audience sentiment and specific mentions in comments and chat.</p>
 
                     <div className="mt-4 grid grid-cols-4 gap-4">
                         <StatCard
@@ -453,10 +652,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                     <div className="mt-6 grid grid-cols-3 gap-6">
                         <Card className="col-span-2">
                             <CardHeader>
-                                <CardTitle className="text-base">Mentions by platform</CardTitle>
+                                <CardTitle className="text-base">Sentiment by Platform</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <div className="space-y-3">
+                                <div className="space-y-4">
                                     {details.brandMentions.platformBreakdown.map((pb: any) => {
                                         const Icon = PLATFORM_ICONS[pb.platform];
                                         const total = pb.mentions;
@@ -468,7 +667,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                                 key={pb.platform}
                                                 className="flex items-center gap-4"
                                             >
-                                                <div className="flex w-20 items-center gap-2">
+                                                <div className="flex w-24 items-center gap-2">
                                                     {Icon && (
                                                         <Icon
                                                             size={14}
@@ -477,7 +676,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                                     )}
                                                     <span className="text-sm text-[var(--text-secondary)]">{PLATFORM_LABELS[pb.platform]}</span>
                                                 </div>
-                                                <div className="flex h-3 flex-1 overflow-hidden rounded-full bg-[var(--bg-primary)]">
+                                                <div className="flex h-2.5 flex-1 overflow-hidden rounded-full bg-[var(--bg-primary)]">
                                                     <div
                                                         className="bg-[var(--color-green)] transition-all"
                                                         style={{ width: `${posPercent}%` }}
@@ -496,7 +695,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                         );
                                     })}
                                 </div>
-                                <div className="mt-4 flex items-center gap-5 text-xs text-[var(--text-muted)]">
+                                <div className="mt-6 flex items-center gap-5 text-xs text-[var(--text-muted)]">
                                     <div className="flex items-center gap-1.5">
                                         <div className="h-2.5 w-2.5 rounded-full bg-[var(--color-green)]" /> Positive
                                     </div>
@@ -512,14 +711,14 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
                         <Card>
                             <CardHeader>
-                                <CardTitle className="text-base">Top keywords</CardTitle>
+                                <CardTitle className="text-base">Top Keywords</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <div className="flex flex-wrap items-center gap-2">
+                                <div className="flex flex-wrap gap-2">
                                     {details.brandMentions.overview.topKeywords.map((kw: string) => (
                                         <span
                                             key={kw}
-                                            className="inline-flex items-center justify-center rounded-full border border-[var(--border-light)] bg-[var(--bg-primary)] px-3 py-1.5 text-sm font-medium text-[var(--text-secondary)]"
+                                            className="inline-flex items-center justify-center rounded-lg border border-[var(--border-light)] bg-[var(--bg-primary)] px-3 py-1.5 text-sm font-medium text-[var(--text-secondary)]"
                                         >
                                             {kw}
                                         </span>
@@ -531,7 +730,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
                     <Card className="mt-6">
                         <CardHeader>
-                            <CardTitle className="text-base">Recent brand mentions ({details.brandMentions.comments.length})</CardTitle>
+                            <CardTitle className="text-base">Brand Mentions ({details.brandMentions.comments.length})</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-0 divide-y divide-[var(--border-light)]">
@@ -542,7 +741,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                     return (
                                         <div
                                             key={comment.id}
-                                            className="flex gap-4 py-3.5 first:pt-0 last:pb-0"
+                                            className="flex gap-4 py-4 first:pt-0 last:pb-0"
                                         >
                                             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--bg-primary)]">
                                                 {Icon && (
@@ -563,8 +762,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                                         {sentiment.label}
                                                     </span>
                                                 </div>
-                                                <p className="mt-0.5 text-sm text-[var(--text-secondary)]">{comment.text}</p>
-                                                <div className="mt-1.5 flex items-center gap-4 text-xs text-[var(--text-muted)]">
+                                                <p className="mt-1 text-sm text-[var(--text-secondary)]">{comment.text}</p>
+                                                <div className="mt-2 flex items-center gap-4 text-xs text-[var(--text-muted)]">
                                                     <span className="truncate italic">on &quot;{comment.postTitle}&quot;</span>
                                                     {comment.likes > 0 && (
                                                         <span className="flex shrink-0 items-center gap-1">
