@@ -31,7 +31,6 @@ const audienceConfig = {
 export default function CommunityManagerPage() {
     return (
         <div className="mx-auto max-w-7xl">
-            {/* EN-TÊTE */}
             <div className="flex items-center gap-4 mb-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[var(--border-light)] bg-[var(--bg-card)] text-[var(--text-primary)] shadow-sm">
                     <MessageSquare size={24} />
@@ -42,7 +41,6 @@ export default function CommunityManagerPage() {
                 </div>
             </div>
 
-            {/* CARTES DE STATISTIQUES */}
             <div className="grid grid-cols-4 gap-4">
                 {stats.map((stat: any, i: number) => (
                     <StatsCard
@@ -56,7 +54,6 @@ export default function CommunityManagerPage() {
                 ))}
             </div>
 
-            {/* GRAPHIQUE COMPARATIF DES PLATEFORMES */}
             <div className="mt-6">
                 <Card className="shadow-none border-[var(--border-light)] overflow-hidden">
                     <CardHeader className="pb-2">
@@ -78,7 +75,6 @@ export default function CommunityManagerPage() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-6">
-                {/* TABLEAU 1 : MENTIONS & MESSAGES */}
                 <Card className="shadow-none border-[var(--border-light)]">
                     <CardHeader>
                         <CardTitle className="text-base font-bold">Recent Mentions Inbox</CardTitle>
@@ -130,7 +126,6 @@ export default function CommunityManagerPage() {
                     </CardContent>
                 </Card>
 
-                {/* TABLEAU 2 : POSTS PROGRAMMÉS */}
                 <Card className="shadow-none border-[var(--border-light)]">
                     <CardHeader>
                         <CardTitle className="text-base font-bold">Scheduled Posts</CardTitle>
