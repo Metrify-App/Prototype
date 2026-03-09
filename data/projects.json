@@ -1,0 +1,208 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "name": "Visa",
+            "logo": "/Visa.jpg",
+            "startDate": "2026-01-15",
+            "endDate": "2027-01-15",
+            "archived": false,
+            "pinned": true,
+            "stats": {
+                "mediaValue": "$18,450",
+                "views": "1.37M",
+                "followers": "+2,340",
+                "engagement": "4.8%"
+            },
+            "videos": [
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Test dernière carte Visa - Mon avis apres 2 semaines",
+                    "author": "Gotaga",
+                    "platform": "youtube",
+                    "views": "245K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Unboxing Visa x Gentle Mates",
+                    "author": "Michou",
+                    "platform": "youtube",
+                    "views": "189K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Visa Test - Fortnite 120fps",
+                    "author": "Squeezie",
+                    "platform": "youtube",
+                    "views": "512K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Setup tour avec la nouvelle carte Visa",
+                    "author": "Kameto",
+                    "platform": "youtube",
+                    "views": "98K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Visa vs Mastercard - Le comparatif",
+                    "author": "Sardoche",
+                    "platform": "youtube",
+                    "views": "321K"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Nike Air Max Collab",
+            "logo": null,
+            "startDate": "2026-02-01",
+            "endDate": null,
+            "archived": false,
+            "pinned": false,
+            "stats": {
+                "mediaValue": "$12,800",
+                "views": "958K",
+                "followers": "+1,120",
+                "engagement": "5.2%"
+            },
+            "videos": [
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Les Nike Air Max x Gentle Mates sont la",
+                    "author": "Gotaga",
+                    "platform": "youtube",
+                    "views": "178K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "J'ai designe ma propre paire de Nike",
+                    "author": "Michou",
+                    "platform": "youtube",
+                    "views": "423K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Drop Nike x Gentle Mates - Behind the scenes",
+                    "author": "Kameto",
+                    "platform": "youtube",
+                    "views": "67K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "On air max review - Worth the hype?",
+                    "author": "Squeezie",
+                    "platform": "youtube",
+                    "views": "290K"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Red Bull Gaming",
+            "logo": null,
+            "startDate": "2025-11-01",
+            "endDate": "2026-01-31",
+            "archived": false,
+            "pinned": false,
+            "stats": {
+                "mediaValue": "$31,200",
+                "views": "1.28M",
+                "followers": "-180",
+                "engagement": "3.9%"
+            },
+            "videos": [
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "24h challenge Red Bull x Gentle Mates",
+                    "author": "Gotaga",
+                    "platform": "youtube",
+                    "views": "890K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Red Bull Gaming Event - VLOG",
+                    "author": "Kameto",
+                    "platform": "youtube",
+                    "views": "156K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Tournoi Red Bull - On a tout donne",
+                    "author": "Sardoche",
+                    "platform": "youtube",
+                    "views": "234K"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Coca-Cola Summer",
+            "logo": null,
+            "startDate": "2025-06-01",
+            "endDate": "2025-08-31",
+            "archived": true,
+            "pinned": false,
+            "stats": {
+                "mediaValue": "$8,900",
+                "views": "912K",
+                "followers": "+890",
+                "engagement": "4.1%"
+            },
+            "videos": [
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Summer vibes avec Coca-Cola",
+                    "author": "Michou",
+                    "platform": "youtube",
+                    "views": "345K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Pool party Coca x Gentle Mates",
+                    "author": "Gotaga",
+                    "platform": "youtube",
+                    "views": "567K"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Logitech G Pro",
+            "logo": null,
+            "startDate": "2025-03-01",
+            "endDate": "2025-05-15",
+            "archived": true,
+            "pinned": false,
+            "stats": {
+                "mediaValue": "$5,600",
+                "views": "413K",
+                "followers": "-45",
+                "engagement": "3.4%"
+            },
+            "videos": [
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Logitech G Pro X - Le meilleur casque gaming?",
+                    "author": "Sardoche",
+                    "platform": "youtube",
+                    "views": "123K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Setup Logitech complet - Review honnete",
+                    "author": "Kameto",
+                    "platform": "youtube",
+                    "views": "89K"
+                },
+                {
+                    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                    "title": "Logitech x Gentle Mates - Unboxing special",
+                    "author": "Gotaga",
+                    "platform": "youtube",
+                    "views": "201K"
+                }
+            ]
+        }
+    ]
+}

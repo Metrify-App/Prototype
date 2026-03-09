@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 
 import './globals.css';
 
+import { PinnedProjectsProvider } from '@/app/context/pinned-projects';
+
 import Sidebar from '@/app/components/sidebar';
 
 const geistSans = Geist({
@@ -23,8 +25,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${geistSans.variable} antialiased`}>
-                <Sidebar />
-                <main className="ml-[var(--sidebar-width)] min-h-screen p-8">{children}</main>
+                <PinnedProjectsProvider>
+                    <Sidebar />
+                    <main className="ml-[var(--sidebar-width)] min-h-screen p-8">{children}</main>
+                </PinnedProjectsProvider>
             </body>
         </html>
     );

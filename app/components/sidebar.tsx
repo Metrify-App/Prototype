@@ -1,14 +1,21 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import { Home, BarChart3, Plus, MoreVertical, Users, Settings, Link as LinkIcon, FolderOpen, Pin } from 'lucide-react';
+
 import Image from 'next/image';
-import { Home, BarChart3, Plus, MoreVertical, Users, Settings, Link, FolderOpen, Pin } from 'lucide-react';
+import Link from 'next/link';
+
 import { SiTwitter, SiTwitch, SiYoutube, SiInstagram, SiTiktok } from './social-icons';
 import sidebarData from '@/data/sidebar.json';
+import { usePinnedProjects } from '@/app/context/pinned-projects';
 
 const LUCIDE_ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
     Home,
     BarChart3,
     Users,
     Settings,
-    Link,
+    Link: LinkIcon,
     FolderOpen,
     Pin
 };
@@ -27,6 +34,9 @@ function getIcon(iconName: string) {
 
 export default function Sidebar() {
     const { workspace, navigation, footer } = sidebarData;
+    const { pinnedProjects } = usePinnedProjects();
+
+    const pathname = usePathname();
 
     return (
         <aside className="fixed top-0 left-0 flex h-screen w-[var(--sidebar-width)] flex-col border-r border-[var(--border-light)] bg-[var(--bg-sidebar)]">
@@ -56,7 +66,8 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
-                        active={item.active}
+                        href={item.href}
+                        active={pathname === item.href}
                     />
                 ))}
 
@@ -69,6 +80,8 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
+                        href={item.href}
+                        active={pathname === item.href}
                     />
                 ))}
 
@@ -81,6 +94,8 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
+                        href={item.href}
+                        active={pathname === item.href}
                     />
                 ))}
 
@@ -90,6 +105,18 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
+                        href={item.href}
+                        active={pathname === item.href}
+                    />
+                ))}
+                {pinnedProjects.map(project => (
+                    <NavItem
+                        key={project.id}
+                        icon={Pin}
+                        label={project.name}
+                        href={`/partnerships/projects/${project.id}`}
+                        active={pathname === `/partnerships/projects/${project.id}`}
+                        indented
                     />
                 ))}
 
@@ -99,6 +126,8 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
+                        href={item.href}
+                        active={pathname === item.href}
                     />
                 ))}
             </nav>
@@ -111,6 +140,8 @@ export default function Sidebar() {
                         key={item.label}
                         icon={getIcon(item.icon)}
                         label={item.label}
+                        href={item.href}
+                        active={pathname === item.href}
                     />
                 ))}
             </div>
@@ -134,22 +165,27 @@ function SectionHeader({ label, hasAdd }: { label: string; hasAdd?: boolean }) {
 function NavItem({
     icon: Icon,
     label,
-    active
+    href,
+    active,
+    indented
 }: {
     icon: React.ComponentType<{ size?: number; className?: string }>;
     label: string;
+    href: string;
     active?: boolean;
+    indented?: boolean;
 }) {
     return (
-        <button
-            className={`flex w-full items-center gap-3 rounded-lg px-2 py-2 text-sm transition-colors ${
+        <Link
+            href={href}
+            className={`flex w-full items-center gap-3 rounded-lg py-2 text-sm transition-colors ${indented ? 'pl-5 pr-2' : 'px-2'} ${
                 active
                     ? 'bg-[var(--sidebar-active)] font-medium text-[var(--text-primary)]'
                     : 'text-[var(--text-secondary)] hover:bg-[var(--sidebar-hover)] hover:text-[var(--text-primary)]'
             }`}
         >
-            <Icon size={18} />
-            <span>{label}</span>
-        </button>
+            <Icon size={indented ? 14 : 18} />
+            <span className="truncate">{label}</span>
+        </Link>
     );
 }

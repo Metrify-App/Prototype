@@ -19,8 +19,7 @@
             { "label": "TikTok", "icon": "tiktok", "href": "/social/tiktok" }
         ],
         "partnerships": [
-            { "label": "Project", "icon": "FolderOpen", "href": "/partnerships/project" },
-            { "label": "Visa", "icon": "Pin", "href": "/partnerships/visa" }
+            { "label": "Projects", "icon": "FolderOpen", "href": "/partnerships/projects" }
         ],
         "tools": [
             { "label": "Tracking links", "icon": "Link", "href": "/tools/tracking-links" }
