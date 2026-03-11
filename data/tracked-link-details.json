@@ -1,0 +1,98 @@
+{
+    "1": {
+        "geography": {
+            "countries": [
+                { "name": "France", "value": 850, "percentage": "68%" },
+                { "name": "Belgium", "value": 150, "percentage": "12%" },
+                { "name": "Switzerland", "value": 120, "percentage": "9.6%" },
+                { "name": "Canada", "value": 80, "percentage": "6.4%" },
+                { "name": "Other", "value": 50, "percentage": "4%" }
+            ],
+            "regions": [
+                { "name": "Île-de-France", "value": 400 },
+                { "name": "Auvergne-Rhône-Alpes", "value": 120 },
+                { "name": "Provence-Alpes-Côte d'Azur", "value": 80 }
+            ],
+            "cities": [
+                { "name": "Paris", "value": 320 },
+                { "name": "Lyon", "value": 90 },
+                { "name": "Marseille", "value": 60 }
+            ]
+        },
+        "sources": [
+            { "name": "Instagram", "value": 600, "platform": "instagram" },
+            { "name": "Twitter", "value": 350, "platform": "twitter" },
+            { "name": "Direct", "value": 200, "platform": "direct" },
+            { "name": "YouTube", "value": 100, "platform": "youtube" }
+        ],
+        "devices": {
+            "os": [
+                { "name": "iOS", "value": 750, "percentage": "60%" },
+                { "name": "Android", "value": 350, "percentage": "28%" },
+                { "name": "Windows", "value": 100, "percentage": "8%" },
+                { "name": "macOS", "value": 50, "percentage": "4%" }
+            ],
+            "types": [
+                { "name": "Mobile", "value": 1100, "percentage": "88%" },
+                { "name": "Desktop", "value": 130, "percentage": "10.4%" },
+                { "name": "Tablet", "value": 20, "percentage": "1.6%" }
+            ]
+        }
+    },
+    "2": {
+        "geography": {
+            "countries": [
+                { "name": "France", "value": 35000, "percentage": "76.4%" },
+                { "name": "Belgium", "value": 4500, "percentage": "9.8%" },
+                { "name": "Switzerland", "value": 3200, "percentage": "7%" },
+                { "name": "Other", "value": 3100, "percentage": "6.8%" }
+            ],
+            "regions": [],
+            "cities": []
+        },
+        "sources": [
+            { "name": "Twitch", "value": 40000, "platform": "twitch" },
+            { "name": "Twitter", "value": 4500, "platform": "twitter" },
+            { "name": "Instagram", "value": 1300, "platform": "instagram" }
+        ],
+        "devices": {
+            "os": [
+                { "name": "iOS", "value": 25000, "percentage": "54.6%" },
+                { "name": "Android", "value": 15000, "percentage": "32.7%" },
+                { "name": "Windows", "value": 4000, "percentage": "8.7%" },
+                { "name": "macOS", "value": 1800, "percentage": "4%" }
+            ],
+            "types": [
+                { "name": "Mobile", "value": 40000, "percentage": "87.3%" },
+                { "name": "Desktop", "value": 5000, "percentage": "10.9%" },
+                { "name": "Tablet", "value": 800, "percentage": "1.8%" }
+            ]
+        }
+    },
+    "3": {
+        "geography": {
+            "countries": [
+                { "name": "France", "value": 700, "percentage": "78.6%" },
+                { "name": "Other", "value": 190, "percentage": "21.4%" }
+            ],
+            "regions": [],
+            "cities": []
+        },
+        "sources": [
+            { "name": "Instagram", "value": 850, "platform": "instagram" },
+            { "name": "Direct", "value": 40, "platform": "direct" }
+        ],
+        "devices": {
+            "os": [
+                { "name": "iOS", "value": 600, "percentage": "67.4%" },
+                { "name": "Android", "value": 250, "percentage": "28.1%" },
+                { "name": "Other", "value": 40, "percentage": "4.5%" }
+            ],
+            "types": [
+                { "name": "Mobile", "value": 850, "percentage": "95.5%" },
+                { "name": "Desktop", "value": 30, "percentage": "3.4%" },
+                { "name": "Tablet", "value": 10, "percentage": "1.1%" }
+            ]
+        }
+    }
+}
