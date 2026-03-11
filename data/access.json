@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Antoine",
+      "email": "antoine@metrify.io",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Marie Laurant",
+      "email": "m.laurant@metrify.io",
+      "role": "Editor"
+    },
+    {
+      "id": 3,
+      "name": "Jean Dupont",
+      "email": "j.dupont@metrify.io",
+      "role": "View"
+    }
+  ],
+  "external": [
+    {
+      "id": 4,
+      "name": "Red Bull France",
+      "email": "marketing@redbull.fr",
+      "pages": ["Projects/Red Bull France", "Social/Twitter", "Social/Instagram"]
+    },
+    {
+      "id": 5,
+      "name": "Visa",
+      "email": "sponsorship@visa.com",
+      "pages": ["Projects/Visa", "Social"]
+    }
+  ]
+}
