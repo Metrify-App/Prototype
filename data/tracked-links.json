@@ -1,0 +1,30 @@
+{
+    "links": [
+        {
+            "id": "1",
+            "name": "Campagne Printemps 2026",
+            "originalUrl": "https://www.example.com/products/shoes",
+            "shortUrl": "mtr.fy/shoes26",
+            "clicks": 1250,
+            "createdAt": "2026-02-15",
+            "projectId": "2"
+        },
+        {
+            "id": "2",
+            "name": "Partenariat Twitch Squeezie",
+            "originalUrl": "https://www.example.com/promo/squeezie",
+            "shortUrl": "mtr.fy/sqz-promo",
+            "clicks": 45800,
+            "createdAt": "2026-03-01",
+            "projectId": "1"
+        },
+        {
+            "id": "3",
+            "name": "Bio Instagram",
+            "originalUrl": "https://www.example.com",
+            "shortUrl": "mtr.fy/ig-bio",
+            "clicks": 890,
+            "createdAt": "2026-01-20"
+        }
+    ]
+}
