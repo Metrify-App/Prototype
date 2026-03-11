@@ -1,0 +1,25 @@
+{
+  "social_accounts": {
+    "twitter": [
+      { "id": "t1", "name": "Gentle Mates" },
+      { "id": "t2", "name": "Paris M8" }
+    ],
+    "twitch": [
+      { "id": "tw1", "name": "Gentle Mates" },
+      { "id": "tw2", "name": "Gentle Mates Replay" },
+      { "id": "tw3", "name": "Squeezie" },
+      { "id": "tw4", "name": "Gotaga" },
+      { "id": "tw5", "name": "Brawks" },
+      { "id": "tw6", "name": "Itachi" }
+    ],
+    "youtube": [
+      { "id": "y1", "name": "Gentle Mates" }
+    ],
+    "instagram": [
+      { "id": "i1", "name": "Gentle Mates" }
+    ],
+    "tiktok": [
+      { "id": "tk1", "name": "Gentle Mates" }
+    ]
+  }
+}
